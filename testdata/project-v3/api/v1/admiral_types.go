@@ -23,6 +23,10 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
+// FooBarBaz ...
+// +kubebuilder:validation:Enum=foo;bar;baz
+type FooBarBaz string
+
 // AdmiralSpec defines the desired state of Admiral
 type AdmiralSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
@@ -34,7 +38,7 @@ type AdmiralSpec struct {
 
 	// Bar is an example field of Admiral. Edit admiral_types.go to remove/update
 	// +optional
-	Bar map[string]string `json:"bar,omitempty"`
+	Bar map[FooBarBaz]string `json:"bar,omitempty"`
 }
 
 // AdmiralStatus defines the observed state of Admiral
