@@ -35,6 +35,12 @@ spec:
           spec:
             description: AdmiralSpec defines the desired state of Admiral
             properties:
+              bar:
+                additionalProperties:
+                  type: string
+                description: Bar is an example field of Admiral. Edit admiral_types.go
+                  to remove/update
+                type: object
               foo:
                 description: Foo is an example field of Admiral. Edit admiral_types.go
                   to remove/update
