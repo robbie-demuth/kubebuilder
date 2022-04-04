@@ -29,7 +29,12 @@ type AdmiralSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Admiral. Edit admiral_types.go to remove/update
+	// +optional
 	Foo string `json:"foo,omitempty"`
+
+	// Bar is an example field of Admiral. Edit admiral_types.go to remove/update
+	// +optional
+	Bar map[string]string `json:"bar,omitempty"`
 }
 
 // AdmiralStatus defines the observed state of Admiral
